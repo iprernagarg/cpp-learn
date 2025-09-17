@@ -102,6 +102,40 @@ void alternateSwap(int arr[],int size){
     }
     cout<<endl; 
 }
+void uniqueElement(int arr[],int size){
+    int flag=0;
+    for (int i = 0; i < size; i++){
+        for (int j = 0; j <size; j++)
+        {
+            if(arr[i]==arr[j]&& i!=j){
+                flag=0;
+                
+                break;
+                
+            }
+            else{
+                flag=1;
+                
+            }
+            
+        }
+       if(flag==1){
+            cout<<arr[i]<<" is an unique element"<<endl;
+        }
+       
+        
+    }
+     
+    
+}
+int unique(int arr[],int size){
+    int ans=0;
+for (int i = 0; i < size; i++)
+{
+   ans=ans^arr[i];
+}
+return ans;
+}
 int main(){
     int size;
     cout<<"Enter the size of the array: "<<endl;
@@ -114,14 +148,16 @@ int main(){
     //char name[5]={'A','b','c','d','e'};
     //printarray(name,5);
    
-    Max(num,size);
-    Min(num,size);
-    sum(num,size);
-    linsearch(num,size,no);
-    reverse(num,size);
+    // Max(num,size);
+    // Min(num,size);
+    // sum(num,size);
+    // linsearch(num,size,no);
+    // reverse(num,size);
     
-    alternateSwap(num,size);
-   
+    // alternateSwap(num,size);
+    //uniqueElement(num,size);
+    cout<<unique(num,size);
+    
     
     return 0;
 }
